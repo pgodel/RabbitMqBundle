@@ -2,7 +2,7 @@
 
 namespace OldSound\RabbitMqBundle\Command;
 
-use Symfony\Bundle\FrameworkBundle\Command\Command;
+use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -12,7 +12,7 @@ use Symfony\Component\Form\Exception\InvalidConfigurationException;
 
 use OldSound\RabbitMqBundle\RabbitMq\ConsumerInterface;
 
-class RpcServerCommand extends Command
+class RpcServerCommand extends ContainerAwareCommand
 {
 
     protected function configure()
